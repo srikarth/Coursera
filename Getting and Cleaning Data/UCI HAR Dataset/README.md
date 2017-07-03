@@ -17,6 +17,6 @@ Project for [Getting and Cleaning Data] was to read in the ["Human Activity Reco
 
 **Once those steps are complete, you can run the R script ([run_analysis.R](run_analysis.R)).** Note that it requires the [reshape2 package](http://cran.r-project.org/web/packages/reshape2/index.html), which can be downloaded from CRAN.
 
-**The output of the R script is a tidy data set, [tidy.csv](tidy.csv).**
+**The output of the R script is a tidy data set, [tidy.csv](tidy.csv) & [tidy.txt](tidy.txt)**
 
 You can read more about the data and the analysis in the [code book](CodeBook.md).
