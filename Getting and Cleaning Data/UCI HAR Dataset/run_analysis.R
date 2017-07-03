@@ -1,13 +1,9 @@
 library(reshape2)
 
-
-
-## STEP 1: Merges the training and the test sets to create one data set
-
-
 #My working directory is from the UCI HAR Dataset folder downloaded from the UCI website.
-
+#Step1
 # reading the data into data frames
+
 subject_train <- read.table("./train/subject_train.txt")
 subject_test <- read.table("./test/subject_test.txt")
 X_train <- read.table("./train/X_train.txt")
@@ -34,10 +30,7 @@ train <- cbind(subject_train, y_train, X_train)
 test <- cbind(subject_test, y_test, X_test)
 combined <- rbind(train, test)
 
-
-## STEP 2: Extracts only the measurements on the mean and standard
-## deviation for each measurement.
-
+#Step2
 # determine which columns contain "mean()" or "std()"
 meanstdcols <- grepl("mean\\(\\)", names(combined)) |
   grepl("std\\(\\)", names(combined))
@@ -48,20 +41,12 @@ meanstdcols[1:2] <- TRUE
 # remove unnecessary columns
 combined <- combined[, meanstdcols]
 
-
-## STEP 3: Uses descriptive activity names to name the activities
-## in the data set.
-## STEP 4: Appropriately labels the data set with descriptive
-## activity names. 
-
+#Step3 & 4
 # convert the activity column from integer to factor
 combined$activity <- factor(combined$activity, labels=c("Walking",
                                                         "Walking Upstairs", "Walking Downstairs", "Sitting", "Standing", "Laying"))
 
-
-## STEP 5: Creates a second, independent tidy data set with the
-## average of each variable for each activity and each subject.
-
+#Step5
 # create the tidy data set
 melted <- melt(combined, id=c("subjectID","activity"))
 tidy <- dcast(melted, subjectID+activity ~ variable, mean)
