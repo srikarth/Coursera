@@ -62,8 +62,12 @@ combined$activity <- factor(combined$activity, labels=c("Walking",
 melted <- melt(combined, id=c("subjectID","activity"))
 tidy <- dcast(melted, subjectID+activity ~ variable, mean)
 
-# write the tidy data set to a file
+# write the tidy data set to a csv file
 write.csv(tidy, "tidy.csv", row.names=FALSE)
 data <- read.csv("tidy.csv")
 names(data)
 head(data)
+
+#write the tidy data sey to a text file
+write.csv(tidy, "tidy.txt", row.names=FALSE)
+
