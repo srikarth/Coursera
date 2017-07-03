@@ -55,7 +55,7 @@ The following files are available for the train and test data. Their description
 
 After downloading the datase from UCI make sure everything is in the same folder. You can run the R script ([run_analysis.R](run_analysis.R)).** Note that it requires the [reshape2 package](http://cran.r-project.org/web/packages/reshape2/index.html), which can be downloaded from CRAN.
 
-**The output of the R script is a tidy data set, [tidy.csv] and [tidy.txt]
+**The output of the R script https://github.com/srikath/Coursera/Getting and Cleaning Data/blob/master/run_analysis.R is a tidy data set, [tidy.csv] and [tidy.txt]
 
 You can read more about the data and the analysis in the [code book](CodeBook.md).
 
