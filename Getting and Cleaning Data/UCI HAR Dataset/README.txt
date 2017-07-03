@@ -62,7 +62,7 @@ X_test.txt
 y_train.txt
 y_test.txt
 
-Once the above steps are completed.you can the Rscript (run_analysis.R) to get the tidy data set as a csv and a text file.
+Once the above steps are completed, Run the Rscript (run_analysis.R) to get the tidy data set as a csv and a text file.
 
 Notes: 
 ======
