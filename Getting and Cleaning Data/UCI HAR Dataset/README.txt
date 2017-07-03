@@ -4,7 +4,7 @@ Version 1.0
 ==================================================================
 Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
 Smartlab - Non Linear Complex Systems Laboratory
-DITEN - Universit‡ degli Studi di Genova.
+DITEN - Universit√† degli Studi di Genova.
 Via Opera Pia 11A, I-16145, Genoa, Italy.
 activityrecognition@smartlab.ws
 www.smartlab.ws
@@ -51,6 +51,18 @@ The following files are available for the train and test data. Their description
 - 'train/Inertial Signals/body_acc_x_train.txt': The body acceleration signal obtained by subtracting the gravity from the total acceleration. 
 
 - 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
+
+
+Move ALL of the following files to the SAME DIRECTORY as the R script:
+features.txt
+subject_train.txt
+subject_test.txt
+X_train.txt
+X_test.txt
+y_train.txt
+y_test.txt
+
+Once the above steps are completed.you can the Rscript (run_analysis.R) to get the tidy data set as a csv and a text file.
 
 Notes: 
 ======
