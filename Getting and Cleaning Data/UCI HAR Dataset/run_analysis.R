@@ -1,9 +1,13 @@
 library(reshape2)
 
 
+
 ## STEP 1: Merges the training and the test sets to create one data set
 
-# read data into data frames
+
+#My working directory is from the UCI HAR Dataset folder downloaded from the UCI website.
+
+# reading the data into data frames
 subject_train <- read.table("./train/subject_train.txt")
 subject_test <- read.table("./test/subject_test.txt")
 X_train <- read.table("./train/X_train.txt")
